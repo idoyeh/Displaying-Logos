@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src="../lib/jquery.js"></script>
+
+    <title>H.Y</title>
+    <!-- add icon link -->
+    <link rel="icon" type="image/png" href="../img/logo_Black_1_H.Y.png" />
+
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Style the navigation bar */
+        .navbar {
+            width: 100%;
+            background-color: #222;
+            overflow: auto;
+            /*margin-bottom: 30px;*/
+        }
+
+            /* Navbar links */
+            .navbar a {
+                float: left;
+                text-align: center;
+                padding: 12px;
+                color: #9D9D9D;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+
+                /* Navbar links on mouse-over */
+                .navbar a:hover {
+                    color: white;
+                    background-color: #555;
+                }
+
+        /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+            }
+        }
+
+        .container {
+            max-width: 100%;
+        }
+
+        .video_src {
+            width: 100%;
+            height: 350px;
+        }
+
+        video {
+            width: 70%;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body dir="rtl">
+
+    <header class="main-header">
+        <!-- Navigation -->
+        <nav>
+            <div class="navbar">
+                <div class="container" style="float:right; font-size:18px;">
+                    <a class="active" href="../views/InstegramStory_Page.html">סטורי אינסטרם</a>
+                    <a href="#">קליפים</a>
+                    <a href="../views/Logo_Page.html">לוגו</a>
+                    <a href="../views/Home_Page.html">דף בית</a>
+                    <a href="../views/Home_Page.html">H.Y</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="w3-container w3-center center" style="max-width:600px">
+        <h2 class="w3-wide">סטורי אינסטגרם</h2>
+        <p class="w3-opacity"><i>עיצובים שונים ומגוונים</i></p>
+    </section>
+
+    <section class="w3-row-padding w3-center w3-light-grey" style="padding-bottom: 10px;">
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>חנות נעליים 1</p>
+            <video controls="controls" poster="../video/img/video_Elad_1.1.jpeg">
+                <source src="../video/old/video_Elad_1.3gpp" class="video_src" type="video/mp4" />
+            </video>
+        </article>
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>חנות נעליים 2<p>
+                <video controls="controls" poster="../video/img/video_Elad_2.jpeg">
+                    <source src="../video/old/video_Elad_2.3gpp" class="video_src" type="video/mp4" />
+                </video>
+        </article>
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>קריוקי<p>
+                <video controls="controls" poster="../video/img/video_Karayoki_1.jpeg">
+                    <source src="../video/video_Karayoki_1.mp4" class="video_src" type="video/mp4" />
+                </video>
+        </article>
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>הראל 1<p>
+                <video controls="controls" poster="../video/img/H.Y_1.jpeg">
+                    <source src="../video/old/H.Y_1.3gpp" class="video_src" type="video/mp4" />
+                </video>
+        </article>
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>הראל 2<p>
+                <video controls="controls" poster="../video/img/video_H.Y_1.jpeg">
+                    <source src="../video/video_H.Y_1.mp4" class="video_src" type="video/mp4" />
+                </video>
+        </article>
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>הראל 3<p>
+                <video controls="controls" poster="../video/img/H.Y_2.jpeg">
+                    <source src="../video/old/H.Y_2.3gpp" class="video_src" type="video/mp4" />
+                </video>
+        </article>
+        <article class="w3-half" style="padding-bottom: 25px;">
+            <p>הראל 4<p>
+                <video controls="controls" poster="../video/img/H.Y_3.jpeg">
+                    <source src="../video/old/H.Y_3.3gpp" class="video_src" type="video/mp4" />
+                </video>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-flickr"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <p class="w3-medium">
+            Logo <a href="#" target="_blank">H.Y</a>
+        </p>
+        <p class="w3-medium">&copy; 2020 - Made by Ido Yehezkel</p>
+    </footer>
+
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var myIndex = 0;
+        videoVolume();
+
+        function videoVolume() {
+            var vids = document.getElementsByTagName("video");
+            for (var i = 0; i < vids.length; i++) {
+                vids.item(i).volume = 0.1;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

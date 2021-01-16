@@ -1,0 +1,67 @@
+[2021-01-13T14:43:44.690Z] [error]: uncaughtException: require(...) is not a function
+TypeError: require(...) is not a function
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js:10:29)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+[2021-01-14T14:14:45.761Z] [error]: uncaughtException: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\routes\courses.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js
+Error: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\routes\courses.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:982:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:864:27)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\routes\courses.js:1:14)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+[2021-01-14T14:15:03.733Z] [error]: uncaughtException: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\routes\courses.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js
+Error: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\routes\courses.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:982:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:864:27)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\routes\courses.js:1:14)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+[2021-01-14T14:15:27.552Z] [error]: uncaughtException: Cannot find module '../routes/home'
+Require stack:
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js
+Error: Cannot find module '../routes/home'
+Require stack:
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js
+- C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:982:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:864:27)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\Sadna\harel-web\startup\routes.js:7:14)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
