@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>H.Y</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="/lib/jquery.js"></script>
+
+<!--========== BOX ICONS ==========-->
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- <link rel="stylesheet" href="/lib/css/w3_home.css" /> -->
+<link rel="stylesheet" href="/lib/w3.css" />
+<link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/assets/css/w3_home.css" />
+
+<!--========== add icon link ==========-->
+<link rel="icon" type="image/png" href="/img/logo_Black_1_H.Y.png" />
+
+<!-- ================================================================================================== -->
+<!-- ============================================= script ============================================= -->
+<!-- ================================================================================================== -->
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+    background-color: FloralWhite;
+    /* background-image: url("/assets/img/background_cloud.jpeg");
+    background-size: cover; */
+  }
+
+  h4 {
+    margin-bottom: 4%;
+  }
+
+  /* ========== header ========== */
+  .header_container {
+    background-color: FloralWhite;
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    /* clear: both; */
+    width: 84%;
+  }
+
+  .header_img {
+    text-align: center;
+  }
+
+  .header_logo_img {
+    max-height: 200px;
+    max-width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  /* ========== navbar ========== */
+  .nav-navbar {
+    max-width: 1060px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    /* padding-left: 20%;
+    padding-right: 20%; */
+  }
+
+  .nav-navbar-sticky {
+    max-width: 1060px;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    font-size: 16px;
+    top: 0;
+    left: 6%;
+    right: 6%;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-navbar-div {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20%;
+    padding-right: 20%;
+    clear: both;
+    background-color: FloralWhite;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-top {
+    width: 88%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* ========== header + navbar --> 1075px or smaller ========== */
+  /* browser window is 1075px or smaller */
+  @media only screen and (max-width: 1075px) {
+    .nav-navbar-div {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+  /* ========================================================== */
+
+  /* ========== header + navbar --> 992px or smaller ========== */
+  /* browser window is 992px or smaller */
+  @media only screen and (max-width: 992px) {
+    .header_container {
+      width: 88%;
+    }
+
+    .header_logo_img {
+      max-height: 120px;
+    }
+
+    .nav-navbar-div {
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+
+    .nav-top {
+      width: 98%;
+    }
+
+    /* .nav-menu-toggle-icon {} */
+
+    #navDemo {
+      max-width: 1060px;
+      width: 88%;
+      margin-left: auto;
+      margin-right: auto;
+      clear: both;
+      background-color: FloralWhite;
+      margin-top: 170px;
+    }
+  }
+
+  /* ========================================================== */
+
+  /* ========== header + navbar --> 600px or smaller ========== */
+  /* browser window is 600px or smaller */
+  @media only screen and (max-width: 600px) {
+    .header_container {
+      width: 88%;
+    }
+
+    .header_logo_img {
+      max-height: 120px;
+    }
+
+    .nav-navbar-div {
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+
+    .nav-top {
+      width: 98%;
+    }
+
+    /* .nav-menu-toggle-icon {} */
+  }
+
+  /* ========================================================== */
+
+  /* ========== Slides ========== */
+  .mySlides {
+    display: none;
+  }
+
+  .container-slides {
+    max-width: 1060px;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    /* max-height: 300px; */
+    /* height: 100px; */
+  }
+
+  .container-marg-bottom {
+    margin-bottom: 40px;
+  }
+
+  .home-small-title-image {
+    background-color: #333333;
+    color: white;
+  }
+
+  .home-img {
+    width: 100%;
+    height: 520px;
+  }
+
+  /* ========== Scroll top ========== */
+  .scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: rgba(6, 156, 84, 0.5);
+    border-radius: .4rem;
+    z-index: 10;
+    transition: .4s;
+    visibility: hidden;
+  }
+
+  .scrolltop:hover {
+    background-color: #048654;
+  }
+
+  .scrolltop__icon {
+    font-size: 1.8rem;
+    color: #fbfefd;
+  }
+
+  /* Show scrolltop */
+  .show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+  }
+
+  /* ========== Slides + Scroll top --> 600px or smaller ========== */
+  /* browser window is 600px or smaller */
+  @media only screen and (max-width: 600px) {
+    .container-marg-bottom {
+      margin-bottom: 35px;
+    }
+
+    .home-img {
+      height: 320px;
+    }
+
+  }
+
+  /* ============================================================== */
+
+  /* ========== ABOUT OUR SERVICES ========== */
+  section {
+    margin-bottom: 3%;
+  }
+
+  #services-div {
+    background-image: url("/assets/img/background_cloud.jpeg");
+    background-size: cover;
+  }
+
+  /* ========== ABOUT US ========== */
+  .video-logo-src {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .round-time-bar div {
+    float: left;
+    height: 5px;
+    width: 0%;
+    background: linear-gradient(to bottom, red, #900);
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 7%;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* ========== SERVICES + ABOUT US --> 600px or smaller ========== */
+  /* browser window is 600px or smaller */
+  @media only screen and (max-width: 600px) {
+    section {
+      margin-bottom: 5%;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 14px;
+    }
+
+    .service-top-right {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* .service-top-left {
+    } */
+
+    .tooltip:hover .tooltiptext {
+      visibility: hidden;
+    }
+
+  }
+
+  /* ============================================================== */
+
+  /* ========== EXAMPLE 3 IMAGES + MODAL ========== */
+  .example-images-padd {
+    padding: 32px 0;
+  }
+
+  .example-images-bottom-marg {
+    margin-bottom: 16px;
+  }
+
+  .modal-header-padd {
+    padding: 32px 0;
+  }
+
+  #modal_img_show {
+    width: 60%;
+  }
+
+  /* ==========  EXAMPLE 3 IMAGES + MODAL --> 600px or smaller ========== */
+  /* browser window is 600px or smaller */
+  @media only screen and (max-width: 600px) {
+    .example-images-padd {
+      /* padding: 20px 32px; */
+      padding: 20px 14px;
+    }
+
+    .example-images-bottom-marg {
+      margin-bottom: 28px;
+    }
+
+    .example-images-bottom-marg img {
+      height: 200px;
+      padding: 0 15%;
+      /* max-height: 300px;
+      padding: 0; */
+      background-color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .example-images-text-padd {
+      padding: 0 15%;
+    }
+
+    .modal-content {
+      margin: 0 20px;
+      width: auto;
+    }
+
+    .modal-header-padd {
+      padding: 10px 0;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    #modal_img_show {
+      width: 100%;
+    }
+  }
+
+  /* ================================================= */
+
+  /* ========== FOOTER ========== */
+  .footer-padd {
+    padding: 32px 0;
+  }
+
+  /* ========== FOOTER --> 600px or smaller ========== */
+  /* browser window is 600px or smaller */
+  @media only screen and (max-width: 600px) {
+    .footer-padd {
+      padding: 10px 0;
+    }
+  }
+
+  /* ================================================= */
+</style>
+
+<body dir="rtl">
+  <!--========== SCROLL TOP ==========-->
+  <a href="#" class="scrolltop" id="scroll-top">
+    <i class='bx bx-chevron-up scrolltop__icon'></i>
+  </a>
+
+  <!--========== HEADER ==========-->
+  <header>
+    <div class="header_container">
+      <div>
+        <div class="header_img">
+          <img alt="logo" class="header_logo_img" src="/assets/img/logo-H.Y-1.png">
+        </div>
+
+        <nav class="nav-navbar">
+          <!-- Navbar -->
+          <div class="nav-navbar-div">
+            <div class="nav-top w3-bar">
+              <a class="nav-menu-toggle w3-bar-item w3-button w3-padding-large w3-hide-large w3-left"
+                href="javascript:void(0)" onclick="showSmallNavbar()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+              </a>
+
+              <a href="/views/home.html"
+                class="active w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium w3-right">ראשי</a>
+              <a href="/views/logo.html"
+                class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium w3-right">לוגו</a>
+              <a href="/views/instegram.html"
+                class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium w3-right">אינסטגרם</a>
+              <a href="#"
+                class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium w3-right">קליפים</a>
+              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium w3-right">כרטיסי
+                ביקור</a>
+            </div>
+
+            <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+            <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-top">
+              <a href="/views/home.html" class="w3-bar-item w3-button w3-padding-large w3-center">ראשי</a>
+              <a href="/views/logo.html" class="w3-bar-item w3-button w3-padding-large w3-center">לוגו</a>
+              <a href="/views/instegram.html" class="w3-bar-item w3-button w3-padding-large w3-center">אינסטגרם</a>
+              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center">קליפים</a>
+              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center">כרטיסי ביקור</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--========== Page content ==========-->
+  <div class="w3-content" style="max-width:2000px;margin-top:35px">
+
+    <!--========== HOME ==========-->
+    <section id="home">
+      <div class="container-slides">
+        <!-- Automatic Slideshow Images -->
+        <div class="mySlides container-marg-bottom w3-display-container w3-center">
+          <div class="home-small-title-image w3-display-topleft w3-padding">תכשיטים</div>
+          <img src="/img/logo_Daimond_black_SF.png" class="home-img">
+        </div>
+
+        <div class="mySlides container-marg-bottom w3-display-container w3-center">
+          <div class="home-small-title-image w3-display-topleft w3-padding">קריוקי</div>
+          <img src="/img/logo_Karayoki_black.png" class="home-img">
+        </div>
+
+        <div class="mySlides container-marg-bottom w3-display-container w3-center">
+          <div class="home-small-title-image w3-display-topleft w3-padding">נדל"ן</div>
+          <img src="/img/logo_Mega_Nadlan_black.png" class="home-img">
+        </div>
+      </div>
+    </section>
+
+    <!--========== ABOUT OUR SERVICES ==========-->
+    <section id="services">
+      <div class="container-slides">
+        <div id="services-div" class="w3-padding-top-64">
+          <h1 class="w3-center">השירות שלנו</h1>
+          <div class="w3-row">
+
+            <div class="service-top-right w3-col l6 m6 w3-padding-large w3-center">
+              <h4 class="w3-text-red"><b>מיתוג העסק באמצעות לוגו</b></h4>
+              <h4 class="w3-text-purple"><b>עיצוב תמונת פרופיל</b></h4>
+              <h4 class="w3-text-blue"><b>יצירת סטורי באינסטגרם</b></h4>
+              <h4 class="w3-text-green"><b>עיצוב כרטיסי ביקור לעסק</b></h4>
+              <h4 class="w3-text-orange"><b>עריכת קליפ מילים לשיר</b></h4>
+            </div>
+
+            <div class="service-top-left w3-col l6 m6 w3-padding-large">
+              <img src="/assets/img/logo-H.Y-1.png" class="w3-round w3-image w3-opacity-min" alt="Menu"
+                style="width:100%">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--========== EXAMPLE 3 IMAGES ==========-->
+    <section id="example_3_images">
+      <div class="container-slides">
+
+        <div class="w3-black container-marg-bottom" id="_3_images">
+          <div class="w3-container w3-content w3-padding-top-64" style="max-width:800px">
+            <h1 class="w3-center">דוגמאות</h1>
+
+            <div class="example-images-padd w3-row-padding" style="margin:0 -16px">
+              <div class="example-images-bottom-marg w3-third">
+                <img src="/img/logo_Daimond_gold.png" alt="פרחים" style="width:100%" class="w3-hover-opacity"
+                  onclick="modalFunction('לוגו לחנות פרחים','/img/logo_Daimond_gold.png')">
+                <div class="example-images-text-padd w3-container w3-white">
+                  <p><b>לוגו לחנות פרחים</b></p>
+                  <p class="w3-opacity">12 בדצמבר 2020</p>
+                  <p>הזמנת פרחים - יום האהבה, יום האם, חתונות ואירועים.</p>
+                  <button class="w3-button w3-black w3-margin-bottom"
+                    onclick="modalFunction('לוגו לחנות פרחים','/img/logo_Daimond_gold.png')">להצגה</button>
+                </div>
+              </div>
+              <div class="example-images-bottom-marg w3-third">
+                <img src="/img/logo_Itzuvim_3.png" alt="מתנות" style="width:100%" class="w3-hover-opacity"
+                  onclick="modalFunction('לוגו לחנות מתנות','/img/logo_Itzuvim_3.png')">
+                <div class="example-images-text-padd w3-container w3-white">
+                  <p><b>לוגו לחנות מתנות</b></p>
+                  <p class="w3-opacity">21 בינואר 2021</p>
+                  <p>הזמנת מתנות אישיות לימי הולדת ואירועים.</p>
+                  <button class="w3-button w3-black w3-margin-bottom"
+                    onclick="modalFunction('לוגו לחנות מתנות','/img/logo_Itzuvim_3.png')">להצגה</button>
+                </div>
+              </div>
+              <div class="example-images-bottom-marg w3-third">
+                <img src="/img/hircut_eliran.png" alt="תספורת אלירן" style="width:100%" class="w3-hover-opacity"
+                  onclick="modalFunction('לוגו למספרה','/img/hircut_eliran.png')">
+                <div class="example-images-text-padd w3-container w3-white">
+                  <p><b>לוגו למספרה</b></p>
+                  <p class="w3-opacity">29 בנובמבר 2020</p>
+                  <p>לוגו למספרה - עיצוב חדשני וצעיר שמזמין לקוחות.</p>
+                  <button class="w3-button w3-black w3-margin-bottom"
+                    onclick="modalFunction('לוגו למספרה','/img/hircut_eliran.png')">להצגה</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--========== MODAL IMAGE ==========-->
+    <div id="imageModal" class="w3-modal">
+      <div class="modal-content w3-modal-content w3-animate-top w3-card-4">
+        <header class="modal-header-padd w3-container w3-teal w3-center">
+          <span onclick="document.getElementById('imageModal').style.display='none'"
+            class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+          <h2 id="modal_img_title_show" class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i></h2>
+        </header>
+        <div class="w3-container w3-center">
+          <img id="modal_img_show" src="" alt="תמונה" class="w3-padding-16">
+        </div>
+        <footer class="w3-container w3-teal w3-center">
+          <button class="w3-button w3-red w3-section"
+            onclick="document.getElementById('imageModal').style.display='none'">סגור<i class="fa fa-remove"></i>
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <!--========== ABOUT US ==========-->
+    <section id="about_us">
+      <div class="container-slides">
+        <div id="services-div" class="w3-padding-top-64">
+          <h1 class="w3-center">קצת על עצמי...</h1>
+          <div class="w3-row">
+
+            <div class="w3-col l6 m6 w3-padding-large">
+              <div class="w3-display-container w3-center tooltip">
+                <div class="home-small-title-image w3-display-topleft w3-padding w3-opacity fa fa-play"></div>
+                <video class="video-logo-src" poster="/video/img/logo_Black_1_H.Y.png">
+                  <source src="/video/H.Y_logo_video.mp4" type="video/mp4" />
+                </video>
+                <span class="tooltiptext">להפעלת הסרטון</span>
+              </div>
+
+              <div class="round-time-bar">
+                <div></div>
+              </div>
+            </div>
+
+            <div class="w3-col l6 m6 w3-padding-large w3-center">
+              <h4 class="w3-text-red"><b>מיתוג העסק באמצעות לוגו</b></h4>
+              <h4 class="w3-text-purple"><b>עיצוב תמונת פרופיל</b></h4>
+              <h4 class="w3-text-blue"><b>יצירת סטורי באינסטגרם</b></h4>
+              <h4 class="w3-text-green"><b>עיצוב כרטיסי ביקור לעסק</b></h4>
+              <h4 class="w3-text-orange"><b>עריכת קליפ מילים לשיר</b></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--========== Footer ==========-->
+    <footer class="footer-padd w3-container w3-center w3-black w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">&copy; 2020 - Made by Ido Yehezkel</p>
+    </footer>
+
+    <!-- ================================================================================================== -->
+    <!-- ============================================= script ============================================= -->
+    <!-- ================================================================================================== -->
+    <script>
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+
+      /*==================== SHOW STICKY SCROLL TOP ====================*/
+      // Get the navbar
+      var navbar = document.getElementsByTagName('nav')[0];
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // When the user scrolls the page, execute stickyScroll
+      window.onscroll = function () {
+        stickyScroll()
+      };
+
+      // Add the sticky class to the navbar when you reach its scroll position.
+      // Remove "sticky" when you leave the scroll position.
+      function stickyScroll() {
+        // console.log('sticky --> ' + sticky);
+        // console.log('scrollY --> ' + this.scrollY);
+        scrollTop();
+        if (this.scrollY >= sticky) {
+          navbar.classList.add('nav-navbar-sticky');
+          navbar.classList.remove('nav-navbar');
+          $('#navDemo').css('margin-top', "50px");
+        } else {
+          navbar.classList.add('nav-navbar');
+          navbar.classList.remove('nav-navbar-sticky');
+          $('#navDemo').css('margin-top', (170 - this.scrollY) + "px");
+        }
+      }
+
+      /*==================== SHOW SCROLL TOP ====================*/
+      function scrollTop() {
+        const scrollTop = document.getElementById('scroll-top');
+        // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
+        if (this.scrollY >= 250) scrollTop.classList.add('show-scroll');
+        else scrollTop.classList.remove('show-scroll')
+      }
+
+      /*==================== CHANGE IMAGE EVERY 4 SECONDS ====================*/
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000);
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function showSmallNavbar() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // switch small menu navbar
+      $('.nav-menu-toggle').click(function () {
+        if ($(this).find('i').hasClass('fa fa-bars')) {
+          $(this).find('i').removeClass('fa fa-bars').addClass('fa fa-remove');
+        } else {
+          $(this).find('i').removeClass('fa fa-remove').addClass('fa fa-bars');
+        }
+      });
+
+      /*==================== SHOW MODAL ====================*/
+      function modalFunction(title, img) {
+        document.getElementById('imageModal').style.display = 'block';
+        $('#modal_img_show').attr('src', img);
+        $('#modal_img_title_show').text(title);
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById('imageModal');
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      /*==================== SHOW VIDEO ABOUT US ====================*/
+      var myVideo = document.getElementsByClassName("video-logo-src")[0];
+      var time = 1,
+        stop;
+      myVideo.addEventListener("click", playPause);
+
+      function playPause() {
+        if (myVideo.paused) {
+          myVideo.play();
+          tooltipShow(1);
+          stop = setInterval(timeBar, 1000);
+        } else {
+          myVideo.pause();
+          clearInterval(stop);
+          tooltipShow(0);
+        }
+      }
+
+      function timeBar() {
+        if (time <= 10) {
+          console.log('time--> ' + time);
+          $('.round-time-bar').find('div').css("width", (time++) + "0%");
+        } else {
+          clearInterval(stop);
+          $('.round-time-bar').find('div').css("width", "0%");
+          time = 1;
+          tooltipShow(0);
+        }
+      }
+
+      function tooltipShow(isPlay) {
+        if (isPlay == 1) {
+          $('.tooltiptext').css({
+            "background-color": "transparent",
+            "color": "transparent"
+          });
+        } else {
+          $('.tooltiptext').css({
+            "background-color": "black",
+            "color": "#fff"
+          });
+        }
+      }
+    </script>
+
+</body>
+
+</html>
