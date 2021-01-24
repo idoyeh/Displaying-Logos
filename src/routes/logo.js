@@ -3,8 +3,8 @@ const router = express.Router();
 const path = require('path');
 
 router.get('/', async (req, res) => {
-  res.sendFile(path.resolve(__dirname + '/../../client/views/logo.html'));
-  // res.sendFile(path.resolve(__dirname + '/../../client/views/Logo_Page.html'));
+  // res.sendFile(path.resolve(__dirname + '/../../client/views/logo.html'));
+  res.sendFile(path.resolve(__dirname + '/../../client/views/Logo_Page.html'));
   
 });
 
