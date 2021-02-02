@@ -1,5 +1,7 @@
 {
     "name": "My Express App - Development",
+    "db": "mongodb+srv://ido:ido12345@harel-studio.hi2f2.mongodb.net/harel-studio?retryWrites=true&w=majority",
+    "jwtPrivateKey": "mySecureKey",
     "mail": {
         "host": "dev-mail-server"
     }

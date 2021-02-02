@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>H.Y</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="/lib/jquery.js"></script>
+
+<!--========== BOX ICONS ==========-->
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- <link rel="stylesheet" href="/lib/css/w3_home.css" /> -->
+<link rel="stylesheet" href="/lib/w3.css" />
+<link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/assets/css/w3_home.css" />
+
+<!--========== add icon link ==========-->
+<link rel="icon" type="image/png" href="/img/logo_Black_1_H.Y.png" />
+
+<!-- ================================================================================================== -->
+<!-- ============================================= script ============================================= -->
+<!-- ================================================================================================== -->
+<style>
+
+</style>
+
+<body dir="rtl">
+    <!--========== HEADER ==========-->
+    <div class="container">
+        <nav class="nav-navbar">
+            <div class="nav_icon" onclick="toggleSiderbar()">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <div class="navbar__left">
+                <a href="#">ראשי</a>
+                <a href="#">לוגו</a>
+                <a href="#">אינסטגרם</a>
+                <a href="#">קליפים</a>
+                <a href="#">כרטיסי ביקור</a>
+            </div>
+
+            <div class="navbar__right">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-clock-o"></i>
+                </a>
+                <a href="#">
+                    <img width="30" src="" alt="">
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="main__container">
+
+                <div class="main__title">
+                    <img src="" alt="">
+                    <div class="main_greeting">
+                        <h1>שלום הראל</h1>
+                        <p>ברוך הבא לדף מנהל מערכת</p>
+                    </div>
+                </div>
+
+                <div class="main_cards">
+
+                    <div class="card">
+                        <i class="fa fa-user-o fa-2x text-lightblue"></i>
+                        <div class="card__inner">
+                            <p class="text-primary-p">ברוך הבא לדף מנהל מערכת</p>
+                            <span class="font-bold text-title">578</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <button id="show_courses">הצגת כל הקורסים</button>
+    <div id="err_text"></div>
+
+    <!-- ================================================================================================== -->
+    <!-- ============================================= script ============================================= -->
+    <!-- ================================================================================================== -->
+    <script type="module">
+        /*==================== SHOW STICKY SCROLL TOP ====================*/
+            import {
+                getCoursesRequest
+            } from "/api.js";
+
+            function updateShowUsers(users) {
+                $("#err_text").empty();
+                users.forEach((user) => {
+                    $("#err_text").append(
+                        $("<h4></h4>")
+                        .attr("value", user.name)
+                        .text(`${user.name}: ${user.auther} - [ ${user.tags} ]`).css("color", "blue")
+                    );
+                });
+            }
+
+            $("#show_courses").on("click", () => {
+                getCoursesRequest(updateShowUsers);
+            });
+        </script>
+
+</body>
+
+</html>

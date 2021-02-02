@@ -1,35 +1,59 @@
+const jwt = require('jsonwebtoken');
+const config = require('config');
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
 const { Course, validate } = require('../models/course');
-const mongoose = require('mongoose');
-const express = require('express');
-const router = express.Router();
+const bcrypt = require('bcrypt');
+const _ = require('lodash'); // Pick/Select values from object
 
 router.get('/', async (req, res) => {
-    // throw new Error('Could not get the courses.');
     const courses = await Course.find().sort('name');
-    res.send(courses);
+    
+    res.status(200).send(courses);
     console.log(courses);
 });
 
-router.post('/', auth, async (req, res) => {
+router.post('/', async (req, res) => {
     const { error } = validate(req.body);
-    if (error) { return res.status(400).send(error.details[0].message); }
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
 
-    let course = new Course({
-        name: req.body.name,
-        auther: req.body.auther,
-        tags: req.body.tags,
-        date: req.body.date,
-        isPublished: req.body.isPublished
-    });
-    course = await course.save();
+    let course = new Course(_.pick(req.body, ['name', 'auther', 'tags', 'date', 'isPublished']));
+    await course.save();
+
     res.status(200).send(course);
+    console.log(course);
 });
+
+// router.post('/', auth, async (req, res) => {
+//     const { error } = validate(req.body);
+//     if (error) {
+//         return res.status(400).send(error.details[0].message);
+//     }
+
+//     let course = new Course({
+//         name: req.body.name,
+//         auther: req.body.auther,
+//         tags: req.body.tags,
+//         date: req.body.date,
+//         isPublished: req.body.isPublished
+//     });
+//     course = await course.save();
+//     res.status(200).send(course);
+
+//     // const token = course.generateAuthToken();
+//     // res.status(200).header('x-auth-token', token).send(_.pick(course, ['name', 'auther', 'tags', 'date', 'isPublished']));
+// });
 
 router.put('/:id', async (req, res) => {
     const { error } = validate(req.body);
-    if (error) { return res.status(400).send(error.details[0].message); }
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
 
     const course = await Course.findByIdAndUpdate(req.params.id, {
         name: req.params.name,

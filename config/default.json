@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey": "mySecureKey"
+    "jwtPrivateKey": "mySecureKey",
+    "db": "mongodb+srv://ido:ido12345@harel-studio.hi2f2.mongodb.net/harel-studio?retryWrites=true&w=majority"
 }

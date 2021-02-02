@@ -1,5 +1,6 @@
 const serverOnLocal = "http://localhost:3000/";
-const serverOnCloud = "https://harel-web.herokuapp.com/";
+const serverOnCloud = "https://harel-studio.herokuapp.com/";
+// const serverOnCloud = "https://harel-web.herokuapp.com/";
 const hostname = window.location.hostname;
 
 export function getServerUrl() {

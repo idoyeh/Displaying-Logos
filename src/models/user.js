@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
   });
   
 userSchema.methods.generateAuthToken = function () {
-  const token = jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, config.get('jwtPrivateKey'));
+  const token = jwt.sign({ _id: this._id }, config.get('jwtPrivateKey'));
   return token;
 }
 
@@ -31,5 +31,5 @@ function validateUser(user) {
 
 // Module exports
 exports.User = User;
-exports.validate = validateUser;
+exports.validateUser = validateUser;
 

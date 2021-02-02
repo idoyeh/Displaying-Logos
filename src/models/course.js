@@ -26,5 +26,6 @@ const courseSchema = new mongoose.Schema({
 }
 
 exports.Course = Course;
+exports.courseSchema = courseSchema;
 exports.validate = validateCourse;
 
