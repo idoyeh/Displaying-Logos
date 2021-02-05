@@ -115,3 +115,141 @@ Error: Configuration property "db" is not defined
     at Function.Module._load (node:internal/modules/cjs/loader:813:14)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
     at node:internal/main/run_main_module:17:47
+[2021-02-05T14:31:56.203Z] [error]: uncaughtException: missing ) after argument list
+C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\logo.js:23
+}
+^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1024:16)
+    at Module._compile (node:internal/modules/cjs/loader:1072:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:8:14)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+[2021-02-05T14:32:44.046Z] [error]: uncaughtException: missing ) after argument list
+C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\logo.js:28
+    }
+    ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1024:16)
+    at Module._compile (node:internal/modules/cjs/loader:1072:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:8:14)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+[2021-02-05T14:32:59.674Z] [error]: uncaughtException: missing ) after argument list
+C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\logo.js:28
+    }
+    ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1024:16)
+    at Module._compile (node:internal/modules/cjs/loader:1072:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:8:14)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+[2021-02-05T14:33:46.912Z] [error]: uncaughtException: Cannot overwrite `Course` model once compiled.
+OverwriteModelError: Cannot overwrite `Course` model once compiled.
+    at Mongoose.model (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\node_modules\mongoose\lib\index.js:543:13)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\models\course.js:13:27)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\courses.js:8:30)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:9:17)
+[2021-02-05T14:34:21.643Z] [error]: uncaughtException: Cannot overwrite `Course` model once compiled.
+OverwriteModelError: Cannot overwrite `Course` model once compiled.
+    at Mongoose.model (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\node_modules\mongoose\lib\index.js:543:13)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\models\course.js:13:27)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\courses.js:8:30)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:9:17)
+[2021-02-05T14:36:01.424Z] [error]: uncaughtException: Cannot overwrite `Course` model once compiled.
+OverwriteModelError: Cannot overwrite `Course` model once compiled.
+    at Mongoose.model (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\node_modules\mongoose\lib\index.js:543:13)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\models\course.js:13:27)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\courses.js:8:30)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:9:17)
+[2021-02-05T14:36:24.279Z] [error]: uncaughtException: Cannot overwrite `Course` model once compiled.
+OverwriteModelError: Cannot overwrite `Course` model once compiled.
+    at Mongoose.model (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\node_modules\mongoose\lib\index.js:543:13)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\models\course.js:13:27)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\courses.js:8:30)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:9:17)
+[2021-02-05T14:37:42.863Z] [error]: uncaughtException: Cannot overwrite `Course` model once compiled.
+OverwriteModelError: Cannot overwrite `Course` model once compiled.
+    at Mongoose.model (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\node_modules\mongoose\lib\index.js:543:13)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\models\course.js:13:27)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\routes\courses.js:8:30)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1137:10)
+    at Module.load (node:internal/modules/cjs/loader:973:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Module.require (node:internal/modules/cjs/loader:997:19)
+    at require (node:internal/modules/cjs/helpers:92:18)
+    at Object.<anonymous> (C:\Users\Ido Yehezkel\Desktop\gitHub\Displaying-Logos\src\startup\routes.js:9:17)
