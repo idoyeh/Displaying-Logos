@@ -20,9 +20,30 @@ router.post('/', async (req, res) => {
     res.send(token);
 });
 
+// POST ['api/auth/login']       -   Login
+router.post('/login', async (req, res) => {
+    console.log("--- Login ---");
+    const { error } = validate(req.body);
+    if (error) { return res.status(400).send(error.details[0].message); }
+
+    let user = await User.findOne( { name: req.body.name } );
+    if (!user) { return res.status(404).send('Invalid name or password.'); }
+
+    const validPassword = await bcrypt.compare(req.body.password, user.password);
+    if (!validPassword) { return res.status(400).send('Invalid name or password.'); }
+
+    // const token = user.generateAuthToken();
+    // res.send(token);
+
+    // Create JWT
+    res.header('x-auth-token', user.generateAuthToken());
+    res.send(_.pick(user, ['name', 'password']));
+});
+
 function validate(req) {
     const schema = Joi.object({
-        email: Joi.string().min(5).max(255).required().email(),
+        email: Joi.string().min(5).max(255).email(),
+        name: Joi.string().min(2).max(255).required(),
         password: Joi.string().min(5).max(255).required()
     });
 

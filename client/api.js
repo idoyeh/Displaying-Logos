@@ -30,35 +30,16 @@ function getApiRouteByUserType(userType) {
 
 //#region Login Requests
 
-export function childLoginRequest(childId, gamesPassword, successFunction, errorFunction) {
-    if(childId.length < 2 || gamesPassword.length < 2)
-        return;
+export function userLoginRequest(userName, userPassword, successFunction, errorFunction) {
     $.ajax({
-        url: childsApi + "login/",
+        url: authApi + "login",
         method: "POST",
         data: JSON.stringify({
-            id:childId,
-            password: gamesPassword
-        }),
-        success: function (data, textStatus, xhr) {
-            successFunction(data);
-        },
-        error: function (xhr) {
-            errorFunction(xhr.status, xhr.responseText);
-        }
-    });
-}
-
-export function userLoginRequest(userType, userId, userPassword, successFunction, errorFunction) {
-    $.ajax({
-        url: authApi + userType,
-        method: "POST",
-        data: JSON.stringify({
-            id: userId,
+            name: userName,
             password: userPassword
         }),
         success: function (data, textStatus, xhr) {
-            localStorage.setItem('token', xhr.getResponseHeader('x-auth-token'));
+            // localStorage.setItem('token', xhr.getResponseHeader('x-auth-token'));
             successFunction(data);
         },
         error: function (xhr) {
@@ -70,24 +51,6 @@ export function userLoginRequest(userType, userId, userPassword, successFunction
 
 //#region Register Requests
 
-export function childRegisterRequest({
-    firstName,
-    lastName,
-    id,
-    birth,
-    gender,
-    address,
-    phone,
-    level,
-    gamesPassword,
-    parent1,
-    parent2
-}, successFunction, errorFunction) {
-    let newChildData = arguments[0];
-    console.log(newChildData);
-    userRegisterRequest("child", newChildData, successFunction, errorFunction)
-}
-
 export function teacherRegisterRequest(firstName, lastName, id, password, phone, successFunction, errorFunction) {
     let newTeacherData = {
         firstName,
@@ -97,17 +60,6 @@ export function teacherRegisterRequest(firstName, lastName, id, password, phone,
         phone
     };
     userRegisterRequest("teacher", newTeacherData, successFunction, errorFunction)
-}
-
-export function parentRegisterRequest(firstName, lastName, id, password, phone, successFunction, errorFunction) {
-    let newParentData = {
-        firstName,
-        lastName,
-        id,
-        password,
-        phone
-    };
-    userRegisterRequest("parent", newParentData, successFunction, errorFunction)
 }
 
 function userRegisterRequest(userType, newUserData, successFunction, errorFunction) {
